@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap');
+@import "tailwindcss";
+@theme {
+  --font-script: "Allura", cursive;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-cinzel: "Cormorant Garamond", serif;
+  --font-arabic: "Amiri", serif;
+  --font-sans: "Inter", sans-serif;
+}
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+body { background: #f8f3e8; font-family: var(--font-serif); overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+::selection { background: #c4a46a; color: #fff; }
