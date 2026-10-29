@@ -77,7 +77,7 @@ export default function Envelope({ onTap, onEmerge, onDone }) {
         <motion.button
           onClick={tap}
           aria-label="Tap to open"
-          className="absolute bottom-[10%] left-1/2 grid h-32 w-32 -translate-x-1/2 cursor-pointer place-items-center rounded-full"
+          className="absolute inset-0 m-auto grid h-32 w-32 cursor-pointer place-items-center rounded-full"
           animate={open ? { opacity: 0, scale: 0.6 } : {}}
           transition={{ duration: 0.5 }}
         >

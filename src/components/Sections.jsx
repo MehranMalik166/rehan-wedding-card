@@ -135,73 +135,66 @@ export function InviteCard() {
   return (
     <Sec tint>
       <Dust />
-      
-      {/* Pura section center me lock hai */}
-      <div className="relative w-full flex justify-center px-4 sm:px-6 overflow-hidden">
-        
-        {/* Box Width set ki hai: Mobile par 85% aur desktop par max 400px */}
-        <div className="relative w-[85vw] max-w-[400px] mx-auto">
-          
-          {/* Flowers - Size mobile ke hisaab se adjust ki hai */}
-          <Flowers className="pointer-events-none absolute -left-6 -top-10 z-10 w-28 sm:w-36 md:w-40" />
-          <Flowers className="pointer-events-none absolute -right-6 -top-10 z-10 w-28 sm:w-36 md:w-40 -scale-x-100" />
-          
-          {/* Arch Background */}
+
+      <div className="relative left-1/2 flex w-screen -translate-x-1/2 justify-center overflow-hidden px-2 sm:px-4">
+
+        <div className="relative w-full max-w-[560px]">
+
+          <Flowers className="pointer-events-none absolute -left-1 -top-10 z-10 w-28 sm:w-36 md:w-44" />
+          <Flowers className="pointer-events-none absolute -right-1 -top-10 z-10 w-28 sm:w-36 md:w-44 -scale-x-100" />
+
           <svg viewBox="0 0 300 540" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
             <path d={archPath} fill="rgba(255,255,255,.7)" stroke="#b8975a" strokeWidth="1.8" vectorEffect="non-scaling-stroke" />
             <path d={archPath} fill="none" stroke="#b8975a" strokeOpacity=".5" vectorEffect="non-scaling-stroke" transform="translate(150 270) scale(.95) translate(-150 -270)" />
           </svg>
 
-          {/* Content Container */}
-          <motion.div 
-            variants={box} 
-            initial="hidden" 
-            whileInView="show" 
-            viewport={{ once: true, amount: 0.15 }} 
-            className="relative flex flex-col items-center px-4 sm:px-6 pb-20 pt-[38%] text-center"
+          <motion.div
+            variants={box}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className="relative flex flex-col items-center px-4 pb-14 pt-[40%] text-center sm:px-8 sm:pt-[34%]"
           >
-            {/* Andar ka text wrapper (85% width taake border ko touch na kare) */}
-            <div className="w-full max-w-[88%] flex flex-col items-center">
-              
-              <motion.p variants={it} dir="rtl" className="font-arabic text-2xl sm:text-3xl md:text-4xl text-[#a8894a]">
+            <div className="flex w-full max-w-[92%] flex-col items-center">
+
+              {/* Arabic: chhota + ek line me, arch se door */}
+              <motion.p variants={it} dir="rtl" className="whitespace-nowrap font-arabic text-[1.55rem] leading-[1.8] text-[#a8894a] sm:text-3xl">
                 بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
               </motion.p>
-              
-              <motion.p variants={it} className="mt-4 sm:mt-6 text-[9px] sm:text-[10px] md:text-xs leading-relaxed tracking-[.2em] sm:tracking-[.25em] text-[#4a3b28]">
+
+              <motion.p variants={it} className="mt-4 text-[10px] leading-relaxed tracking-[.2em] text-[#4a3b28] sm:mt-6 sm:text-xs sm:tracking-[.25em]">
                 YOU ARE INVITED TO THE<br />NIKKAH CEREMONY OF
               </motion.p>
-              
-              {/* Groom Name */}
-              <motion.p variants={it} className="mt-3 sm:mt-4 font-script text-[2.5rem] sm:text-5xl md:text-6xl text-[#3b2e1d] leading-none">
+
+              <motion.p variants={it} className="mt-3 font-script text-[2.8rem] leading-none text-[#3b2e1d] sm:mt-4 sm:text-6xl">
                 {w.groomShort}
               </motion.p>
-              
-              <motion.p variants={it} className="mt-1 sm:mt-2 text-[8px] sm:text-[9px] md:text-[10px] leading-relaxed tracking-[.2em] sm:tracking-[.25em] text-[#4a3b28]/80">
+
+              <motion.p variants={it} className="mt-1 text-[9px] leading-relaxed tracking-[.2em] text-[#4a3b28]/80 sm:mt-2 sm:text-[10px] sm:tracking-[.25em]">
                 SON OF<br />{w.groomParents}
               </motion.p>
-              
-              <motion.p variants={it} className="my-2 sm:my-3 font-script text-2xl sm:text-3xl md:text-4xl text-[#b8975a]">
+
+              <motion.p variants={it} className="my-2 font-script text-3xl text-[#b8975a] sm:my-3 sm:text-4xl">
                 With
               </motion.p>
-              
-              {/* Bride Name */}
-              <motion.p variants={it} className="font-script text-[2.5rem] sm:text-5xl md:text-6xl text-[#3b2e1d] leading-none">
+
+              <motion.p variants={it} className="font-script text-[2.8rem] leading-none text-[#3b2e1d] sm:text-6xl">
                 {w.brideShort}
               </motion.p>
-              
-              <motion.p variants={it} className="mt-1 sm:mt-2 text-[8px] sm:text-[9px] md:text-[10px] leading-relaxed tracking-[.2em] sm:tracking-[.25em] text-[#4a3b28]/80">
+
+              <motion.p variants={it} className="mt-1 text-[9px] leading-relaxed tracking-[.2em] text-[#4a3b28]/80 sm:mt-2 sm:text-[10px] sm:tracking-[.25em]">
                 DAUGHTER OF<br />{w.brideParents}
               </motion.p>
-              
-              <motion.div variants={it} className="mt-4 sm:mt-6 w-full">
+
+              <motion.div variants={it} className="mt-4 w-full sm:mt-6">
                 <Orn />
               </motion.div>
-              
-              <motion.p variants={it} className="mt-4 sm:mt-6 font-script text-xl sm:text-2xl md:text-3xl text-[#8a6d34]">
+
+              <motion.p variants={it} className="mt-4 font-script text-2xl text-[#8a6d34] sm:mt-6 sm:text-3xl">
                 Dear Friends and Family,
               </motion.p>
-              
-              <motion.p variants={it} className="mt-2 text-xs sm:text-sm md:text-base italic leading-relaxed text-[#4a3b28]/90 px-1">
+
+              <motion.p variants={it} className="mt-2 text-[13px] italic leading-snug text-[#4a3b28]/90 sm:text-base">
                 {w.invitationText}
               </motion.p>
             </div>
